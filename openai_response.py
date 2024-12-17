@@ -4,11 +4,6 @@ client = OpenAI()
 
 def get_chatgpt_response(prompt):
     try:
-        '''response = openai.ChatCompletion.create(
-            model="gpt-4",
-            messages=[{ "role": "system", "content": "You are a student from the computer science department." },
-                        {"role": "user", "content": "口語一點，用50字簡答:"+prompt}]
-        )'''
         response = client.chat.completions.create(
             messages=[
                 { "role": "system", "content": "You are a student from the computer science department." },
