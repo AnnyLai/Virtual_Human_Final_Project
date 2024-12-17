@@ -177,13 +177,13 @@ if __name__ == "__main__":
             ).send_keys(GOOGLE_PASSWORD + Keys.RETURN)
 
         # 進入 Google Meet
-        WebDriverWait(driver, 540).until(
+        WebDriverWait(driver, 600).until(
             EC.url_contains("myaccount.google.com")  # 確保登入成功
         )
         driver.get(GOOGLE_MEET_URL)
 
         # 打開 Google Meet 討論區
-        WebDriverWait(driver, 540).until(
+        WebDriverWait(driver, 800).until(
             EC.presence_of_element_located((By.XPATH, '//button[@aria-label="與所有參與者進行即時通訊"]'))
         ).click()
 
